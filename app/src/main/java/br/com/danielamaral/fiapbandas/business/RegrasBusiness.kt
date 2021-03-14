@@ -3,7 +3,7 @@ package br.com.danielamaral.fiapbandas.business
 class RegrasBusiness {
 
     fun getNotaBanda(nomeBanda: String): Double {
-        val notaBanda: Double;
+        var notaBanda: Double = 0.0;
 
         if (nomeBanda.toLowerCase() == "metallica") {
             notaBanda = 10.0
@@ -13,6 +13,6 @@ class RegrasBusiness {
             notaBanda = 2.0
         }
 
-        return 0.0;
+        return notaBanda;
     }
 }
