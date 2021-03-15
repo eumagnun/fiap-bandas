@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         for(i in 1..nota){
             val star:ImageView  = ImageView(this)
-            star.setBackgroundResource(R.drawable.start)
-            val layoutParams = LinearLayout.LayoutParams(40, 40)
+            star.setBackgroundResource(R.drawable.star)
+            val layoutParams = LinearLayout.LayoutParams(100, 100)
             star.setLayoutParams(layoutParams)
             ll_stars.addView(star)
         }
