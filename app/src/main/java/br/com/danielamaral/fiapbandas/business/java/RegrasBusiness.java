@@ -10,7 +10,10 @@ public class RegrasBusiness {
         } else if (banda.toLowerCase().equals("callipso")) {
             return 2.5;
         } else {
-            return 5;
+            return 0.0;
         }
     }
 }
+
+
+

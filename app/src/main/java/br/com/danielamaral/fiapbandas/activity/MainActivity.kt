@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import br.com.danielamaral.fiapbandas.R
-import br.com.danielamaral.fiapbandas.business.RegrasBusiness
+import br.com.danielamaral.fiapbandas.business.java.RegrasBusiness
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -21,16 +21,16 @@ class MainActivity : AppCompatActivity() {
 
     fun avaliarBanda(banda: String) {
         val avaliadorBandas = RegrasBusiness()
-        val nota:Double = avaliadorBandas.getNotaBanda(banda)
+        val nota: Double = avaliadorBandas.getNotaBanda(banda)
         tv_nota.text = nota.toString()
         exibirEstrelas(nota.toInt())
     }
 
-    fun exibirEstrelas(nota:Int){
+    fun exibirEstrelas(nota: Int) {
         ll_stars.removeAllViews()
 
-        for(i in 1..nota){
-            val star:ImageView  = ImageView(this)
+        for (i in 1..nota) {
+            val star: ImageView = ImageView(this)
             star.setBackgroundResource(R.drawable.star)
             val layoutParams = LinearLayout.LayoutParams(100, 100)
             star.setLayoutParams(layoutParams)
